@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TvMaze</string>
+    <string name="title_shows">Shows</string>
+    <string name="title_search">Search</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="content_description_poster">Poster</string>
+    <string name="break_heart">Break heart</string>
+    <string name="not_favorites_tv_shows_found">Not favorites TV SHows Found</string>
+    <string name="hint_search">Search TV Shows</string>
+    <string name="not_tv_shows_found">Not TV Shows found</string>
+    <string name="delete">Delete</string>
+    <string name="recent_searches">Recent searches</string>
+    <string name="season">Season</string>
+    <string name="episode">Episode</string>
+    <string name="back_arrow">Back arrow</string>
+    <string name="poster">Poster</string>
+    <string name="you_can_see_it">You can see it</string>
+    <string name="at_time">At Time</string>
+    <string name="mark_as_favorite">Mark as Favorite</string>
+    <string name="enjoy_ours_tv_shows">Enjoy ours TV Shows</string>
+    <string name="search_tv_shows">Search TV Shows</string>
+    <string name="clear">Clear</string>
+    <string name="not_recent_searches">Not recent searches</string>
+    <string name="favorite_tv_shows">Favorite TV Shows</string>
+    <string name="order_ascendent">Order Ascendent</string>
+    <string name="remove_from_favorite">Remove from Favorite</string>
+</resources>

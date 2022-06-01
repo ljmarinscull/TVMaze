@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_show">
+
+    <fragment
+        android:id="@+id/navigation_show"
+        android:name="com.example.tvmaze.ui.show.ShowFragment"
+        android:label="@string/title_shows"
+        tools:layout="@layout/fragment_show" >
+        <action
+            android:id="@+id/navigation_home_to_showDetails"
+            app:destination="@id/showDetails"
+            app:popUpTo="@id/navigation_show" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.tvmaze.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/navigation_search_to_showDetails"
+            app:destination="@id/showDetails"
+            app:popUpTo="@id/navigation_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.example.tvmaze.ui.favorite.FavoriteFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/navigation_favorite_to_showDetails"
+            app:destination="@id/showDetails"
+            app:popUpTo="@id/navigation_favorite" />
+    </fragment>
+    <fragment
+        android:id="@+id/showDetails"
+        android:name="com.example.tvmaze.ui.show_details.ShowDetailsFragment"
+        android:label="Show Details"
+        tools:layout="@layout/fragment_show_details">
+        <argument
+            android:name="show"
+            app:argType="com.example.tvmaze.data.model.Show"
+            app:nullable="true" />
+        <action
+            android:id="@+id/navigation_showDetails_to_episodeDetails"
+            app:destination="@id/episodeDetails"
+            app:popUpTo="@id/showDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeDetails"
+        android:name="com.example.tvmaze.ui.episode_details.EpisodeDetailsFragment"
+        android:label="fragment_episode_details"
+        tools:layout="@layout/fragment_episode_details" >
+        <argument
+            android:name="episode"
+            app:argType="com.example.tvmaze.data.model.Episode" />
+    </fragment>
+</navigation>

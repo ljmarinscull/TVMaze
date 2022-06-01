@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/episodeName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:paddingVertical="4dp"
+    android:paddingHorizontal="4dp"
+    android:background="@color/search_border_color"
+    tools:text="season 01"
+    android:fontFamily="@font/poppins_semibold"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
