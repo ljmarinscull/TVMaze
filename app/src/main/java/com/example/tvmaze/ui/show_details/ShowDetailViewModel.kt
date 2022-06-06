@@ -91,7 +91,7 @@ class ShowDetailViewModel @Inject constructor(
             }
     }
 
-    fun setFavoriteStatetoCurrentShow() {
+    fun setFavoriteStateToCurrentShow() {
         mCurrentShow?.favorite = !mCurrentShow?.favorite!!
     }
 }

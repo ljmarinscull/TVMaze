@@ -47,7 +47,7 @@ class ShowFragment : Fragment() {
 
         setupViews()
         setupScrollListener()
-        viewModel.loadItems()
+        viewModel.loadItems(-1)
     }
 
     private fun setupViews() = with(binding){

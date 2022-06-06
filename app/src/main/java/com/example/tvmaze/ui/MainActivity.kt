@@ -29,12 +29,6 @@ class MainActivity : AppCompatActivity() {
         mNavController = findNavController(R.id.nav_host_fragment_activity_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-       /* val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_show, R.id.navigation_search, R.id.navigation_favorite
-            )
-        )
-        setupActionBarWithNavController(mNavController, appBarConfiguration)*/
         mNavView.setupWithNavController(mNavController)
 
         setBottomNavVisibility()

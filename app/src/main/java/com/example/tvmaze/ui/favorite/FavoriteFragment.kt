@@ -95,7 +95,7 @@ class FavoriteFragment : Fragment() {
             if (!viewModel.isOrdered()){
                 viewModel.setOrdered()
             } else if (viewModel.isOrdered()){
-                Toast.makeText(requireContext(),"The result are already ordered ASC.",Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(),resources.getString(R.string.result_already_ordered),Toast.LENGTH_LONG).show()
             }
         }
     }

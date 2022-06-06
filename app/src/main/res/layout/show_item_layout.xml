@@ -13,7 +13,7 @@
         android:layout_width="200dp"
         android:layout_height="128dp"
         android:contentDescription="@string/content_description_poster"
-        android:scaleType="fitXY"
+        android:scaleType="matrix"
         android:src="@drawable/res_no_image" />
 
     <TextView

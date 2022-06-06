@@ -24,4 +24,7 @@
     <string name="favorite_tv_shows">Favorite TV Shows</string>
     <string name="order_ascendent">Order Ascendent</string>
     <string name="remove_from_favorite">Remove from Favorite</string>
+    <string name="result_already_ordered">The result are already ordered ASC.</string>
+    <string name="remove_from_fav">Remove from Favorite</string>
+    <string name="mark_as_fav">Mark as Favorite</string>
 </resources>

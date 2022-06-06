@@ -67,12 +67,13 @@ class ShowDetailsFragment : Fragment() {
         name.text = currentShow.name
         days.text = currentShow.days
         time.text = currentShow.time
+        gender.text =  currentShow.genres
 
         val htmlAsSpanned = HtmlCompat.fromHtml(currentShow.summary, 0)
         summary.text = htmlAsSpanned
 
         Glide.with(requireContext())
-            .load(currentShow.poster ?: requireContext().resources.getDrawable(R.drawable.res_no_image, null))
+            .load(currentShow.poster ?: resources.getDrawable(R.drawable.res_no_image, null))
             .centerInside()
             .into(image)
 
@@ -82,7 +83,7 @@ class ShowDetailsFragment : Fragment() {
         favorite.icon = setting.second
 
         favorite.setOnClickListener {
-            viewModel.setFavoriteStatetoCurrentShow()
+            viewModel.setFavoriteStateToCurrentShow()
             val values = setupFavoriteButton()
             if(currentShow.favorite) {
                 viewModel.markAsFavorite()
@@ -103,7 +104,7 @@ class ShowDetailsFragment : Fragment() {
                     }
                 }
                 is Resource.Error -> {
-                   // println(it.er)
+                    println(it.exception.localizedMessage)
                 }
             }
         }
@@ -131,11 +132,11 @@ class ShowDetailsFragment : Fragment() {
 
         if(viewModel.isShowFavorite()) {
             drawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_favorite_fill)
-            text = "Remove from Favorite"
+            text = resources.getString(R.string.remove_from_fav)
             viewModel.markAsFavorite()
         } else {
             drawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_favorite_border)
-            text = "Mark as Favorite"
+            text = resources.getString(R.string.mark_as_fav)
             viewModel.removeFromFavorite()
         }
 

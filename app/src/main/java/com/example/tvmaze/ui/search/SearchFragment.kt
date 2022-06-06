@@ -128,7 +128,7 @@ class SearchFragment : Fragment() {
                     }
                 }
                 is Resource.Error -> {
-                   println(it)
+                    println(it)
                 }
             }
         }
@@ -175,11 +175,13 @@ class SearchFragment : Fragment() {
         findNavController().navigate(action)
     }
 
-   private fun hideKeyboard(){
-        val imm: InputMethodManager? = requireContext().getSystemService(
-            Context.INPUT_METHOD_SERVICE
-        ) as InputMethodManager?
-        imm?.hideSoftInputFromWindow(view!!.windowToken, 0)
+    private fun hideKeyboard(){
+        if(context != null){
+            val imm: InputMethodManager? = requireContext().getSystemService(
+                Context.INPUT_METHOD_SERVICE
+            ) as InputMethodManager?
+            imm?.hideSoftInputFromWindow(view!!.windowToken, 0)
+        }
     }
 
     override fun onDestroyView() {

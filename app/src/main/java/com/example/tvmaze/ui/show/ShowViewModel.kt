@@ -25,11 +25,11 @@ class ShowViewModel @Inject constructor(
 
     private var mCurrentPage: Int = 0
 
-    fun loadItems() {
+    fun loadItems(page: Int? = null) {
         _progressBarVisible.value = true
         viewModelScope.launch(Dispatchers.Main) {
             try {
-                val result = repo.getShows(mCurrentPage)
+                val result = repo.getShows(if (page == -1) 0 else mCurrentPage)
                 if((result as Resource.Success).data.isNotEmpty())
                     mCurrentPage++
                 _progressBarVisible.postValue(false)
